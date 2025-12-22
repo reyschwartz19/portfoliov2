@@ -6,19 +6,19 @@ import test1Img from './assets/test1.jpg';
 
 function App() {
   
-    const [open,isOpen] = useState(false);
+    const [open,setOpen] = useState(false);
     
 
     const toggleMenu = () => {
-      isOpen(prev=>!prev);
+      setOpen(prev => !prev);
     }
 
     const year = new Date().getFullYear();
     
 
   return (
-   <main className='bg-primary text-secondary pb-10'>
-     <header className="fixed flex items-center justify-between px-40 py-4 border-b border-gray-300 bg-primary w-full  max-sm:px-5">
+   <main className='bg-primary text-secondary pb-10 pt-20 sm:pt-24 overflow-x-hidden'>
+     <header className="fixed top-0 left-0 z-50 flex items-center justify-between w-full px-5 py-4 border-b border-gray-300 bg-primary md:px-40">
   <span className="font-heading text-3xl">nrn.</span>
 
   <button onClick={toggleMenu} className="sm:hidden">
@@ -28,9 +28,9 @@ function App() {
   <nav
     className={`
       absolute top-full left-0 w-full bg-primary
-      flex flex-col gap-4 px-5 py-4
+      flex flex-col gap-4 px-5 py-4 max-h-[60vh] overflow-auto
       ${open ? 'block' : 'hidden'}
-      sm:static sm:flex sm:flex-row sm:gap-5 sm:p-0 sm:w-auto 
+      sm:static sm:flex sm:flex-row sm:gap-5 sm:p-0 sm:w-auto
     `}
   >
     <span className="font-primary">Home</span>
@@ -40,9 +40,9 @@ function App() {
   </nav>
 </header>
 
-     <section 
-     className='flex h-screen flex-col items-center text-center px-60 justify-center font-primary text-secondary
-                max-sm:px-10'>
+    <section 
+    className='flex min-h-screen flex-col items-center text-center px-10 justify-center font-primary text-secondary
+         sm:px-40'>
       <p className='font-heading text-4xl mb-3 text-black'>Njong Remy Nga'i</p>
       <p className='text-2xl mb-5'>Front End Developer</p>
       <p>Driven by problem solving and clarity of execution.
