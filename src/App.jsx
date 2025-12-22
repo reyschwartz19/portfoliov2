@@ -7,10 +7,14 @@ import test1Img from './assets/test1.jpg';
 function App() {
   
     const [open,isOpen] = useState(false);
+    
 
     const toggleMenu = () => {
       isOpen(prev=>!prev);
     }
+
+    const year = new Date().getFullYear();
+    
 
   return (
    <main className='bg-primary text-secondary pb-10'>
@@ -94,10 +98,33 @@ function App() {
      </section>
 
      <section className='px-5'>
-      <h2 className='font-heading text-2xl mb-5'>Contact Me</h2>
-      <p className='text-center'>Looking for a frontend developer to bring your ideas to live? Reach out so we can turn those ideas to reality</p>
-      
+      <h2 className='font-heading text-2xl mb-5 text-center'>Contact Me</h2>
+      <p className='text-center mb-5'>Looking for a frontend developer to bring your ideas to live? Reach out so we can turn those ideas to reality</p>
+      <div className='flex flex-col w-full sm:flex-row sm:gap-4 sm:justify-center'>
+        <div className='flex flex-col items-center border border-gray-300 rounded-md p-5 mb-5 sm:w-50'>
+          <Mail className='mb-3 w-5'/>
+          <p className='mb-1 text-[0.8rem]'>Email</p>
+          <p className='text-black text-[0.8rem]'>njongremy30@gmail.com</p>
+        </div>
+        <div className='flex flex-col items-center border border-gray-300 rounded-md p-5 mb-5 sm:w-50'>
+          <Github className='mb-3 w-5'/>
+          <p className='mb-1 text-[0.8rem]'>Github</p>
+          <p className='text-black text-[0.8rem]'>njongremy30@gmail.com</p>
+        </div>
+        <div className='flex flex-col items-center border border-gray-300 rounded-md p-5 mb-5 sm:w-50'>
+          <Linkedin className='mb-3 w-5'/>
+          <p className='mb-1 text-[0.8rem]'>Linkedin</p>
+          <p className='text-black text-[0.8rem]'>njongremy30@gmail.com</p>
+        </div>
+      </div>
      </section>
+
+     <footer className='border-t border-t-gray-300 p-5 flex flex-col items-center'>
+    
+       <p className='text-black text-[0.8rem]'>Njong Remy Nga'i</p>
+       <p className='text-[0.7rem] mb-5'>Frontend Developer</p>
+       <p className='text-[0.7rem]'>&copy; {year} Njong Remy. Built with React and Tailwind</p>
+     </footer>
 
    </main>
   )
