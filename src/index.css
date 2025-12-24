@@ -3,6 +3,12 @@
 @theme{
   --color-primary: #F1F1F1;
   --color-secondary: #333333;
+  --color-accent: #FDB827;
+  --color-tetiary: #21209C;
+  --color-exta: #23120B;
   --font-primary: 'Inter', sans-serif;
   --font-heading: 'Playfair Display', serif;
+}
+html{
+  @apply scroll-smooth;
 }
