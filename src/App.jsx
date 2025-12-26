@@ -2,7 +2,7 @@ import {Github,Linkedin,Mail,Menu,X} from 'lucide-react';
 import { useState } from 'react';
 import Skills from './components/skills';
 import Projects from './components/projects';
-import test1Img from './assets/test1.jpg';
+
 import animeProjectImg from './assets/anime-project.png';
 
 function App() {
@@ -83,7 +83,7 @@ function App() {
       items={['Supabase','Firebase']}
       />
        <Skills
-      title="A Developer Tools"
+      title="Ai Developer Tools"
       items={['Google Ai studio','Antigravity','Cursor']}
       />
      </section>
